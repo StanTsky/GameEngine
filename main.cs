@@ -1,27 +1,32 @@
-// Description:
-// This is a game engine for a text based monster fight game
-//
-// List of design patterns used
-// [Credit anything borrowed is listed next to each design in parentheses]
-// 1. Singleton     for saving      (based on class example)
-// 2. Prototype     for characters  (based on class example, Borderlands game, a classmate)
-// 3. Adapter       for weapons     (based on class example, Borderlands game)
-// 4. Factory       for monsters    (based on class example, Borderlands game)
-// 4. Interpreter   for fight hits  (based on class example)
-//
-// Game description:
-// 1. Game start is logged (initial save)
-// 2. User picks from available playable characters
-// 3. User picks from available weapons
-// 4. Game selections are logged (settings save)
-// 5. Monsters are created
-// 6. User starts a fight with monsters
-// 7. Weapon power is multiplied by hit type (hard or soft)
-// 8. User can call magic (such as to undo damage), if available
-// 9. Game results are logged (fight result save)
-//
-// Author:
-// Stan Turovsky
+/*
+-----------------------------------------------------------------------------
+* Name:       Stan Turovsky
+* Class:      CPSC 24500 -- Object-Oriented Programming
+* Assignment: HW 5
+* File:       main.cs
+* Purpose:    Game engine for a text based monster fight game in C#
+*             - Examples of design patterns
+*
+* List of design patterns used:
+* [Credit anything borrowed is listed next to each design in parentheses]
+* 1. Singleton     for saving      (based on class example)
+* 2. Prototype     for characters  (based on class example, Borderlands game, a classmate)
+* 3. Adapter       for weapons     (based on class example, Borderlands game)
+* 4. Factory       for monsters    (based on class example, Borderlands game)
+* 5. Interpreter   for fight hits  (based on class example)
+*
+* Game description:
+* 1. Game start is logged (initial save)
+* 2. User picks from available playable characters
+* 3. User picks from available weapons
+* 4. Game selections are logged (settings save)
+* 5. Monsters are created
+* 6. User starts a fight with monsters
+* 7. Weapon power is multiplied by hit type (hard or soft)
+* 8. User can call magic (such as to undo damage), if available
+* 9. Game results are logged (fight result save)
+-----------------------------------------------------------------------------
+*/
 
 using System;
 using System.Collections.Generic;
@@ -50,6 +55,7 @@ namespace GameEngine
             Console.WriteLine("Writing out to the game log... " + msg);
         }
     }
+    
     // Prototype design pattern
     public interface ICharacter
     {
