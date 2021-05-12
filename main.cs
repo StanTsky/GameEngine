@@ -55,7 +55,7 @@ namespace GameEngine
             Console.WriteLine("Writing out to the game log... " + msg);
         }
     }
-    
+
     // Prototype design pattern
     public interface ICharacter
     {
@@ -160,6 +160,7 @@ namespace GameEngine
             get { return "Guardian"; }
         }
     }
+
     class Bandit : Monster
     {
         public override string Title
@@ -167,6 +168,7 @@ namespace GameEngine
             get { return "Bandit"; }
         }
     }
+
     class Spider : Monster
     {
         public override string Title
@@ -174,6 +176,7 @@ namespace GameEngine
             get { return "Spider"; }
         }
     }
+
     class MonsterFactory
     {
         public static Monster Get(int id)
@@ -196,10 +199,12 @@ namespace GameEngine
     {
         public int Number;
     }
+    
     abstract class AbstractInterpret
     {
         public abstract void Interpret(HitPower damage, bool undoFlag = false);
     }
+
     class HardHit : AbstractInterpret
     {
         public override void Interpret(HitPower damage, bool undoFlag = false)
@@ -211,6 +216,7 @@ namespace GameEngine
             damage.Number += numberToAdd;
         }
     }
+
     class SoftHit : AbstractInterpret
     {
         public override void Interpret(HitPower damage, bool undoFlag = false)
@@ -222,7 +228,6 @@ namespace GameEngine
             damage.Number += numberToAdd;
         }
     }
-
 
     class Program
     {
